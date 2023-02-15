@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 /**
  * main - prints "is positive", "is negative" or "is zero" depending on n
  * Return: int 0
