@@ -5,10 +5,10 @@
 */
 void jack_bauer(void)
 {
-	char hour;
-	char minute;
+	int hour;
+	int minute;
 
-	for (hour = "00"; hour <= "23"; hour++)
+	for (hour = 00; hour <= 23; hour++)
 	{
 	_putchar(hour);
 	}
