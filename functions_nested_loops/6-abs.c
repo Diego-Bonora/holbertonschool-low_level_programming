@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abs - returns absolute value os number  
+ * _abs - returns absolute value os number
  * @n: character used as input
  * Return: absolute value
 */
