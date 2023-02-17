@@ -21,7 +21,10 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(' ');
+				if (multiplication != 0)
+				{
+					_putchar(' ');
+				}
 				_putchar(multi_number + '0');
 			}
 				if (multiplication != 9)
