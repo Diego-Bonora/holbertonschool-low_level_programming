@@ -20,7 +20,7 @@ void times_table(void)
 				_putchar(multi_number % 10 + '0');
 			}
 			else
-			}
+			{
 				_putchar(' ');
 				_putchar(multi_number + '0');
 			}
