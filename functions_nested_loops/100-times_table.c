@@ -31,6 +31,7 @@ void print_times_table(int n)
 					if (multiplication != 0)
 					{
 						_putchar(' ');
+						_putchar(' ');
 					}
 					_putchar(multi_number + '0');
 				}
