@@ -18,7 +18,7 @@ void print_times_table(int n)
 	{
 		for (number = 0; number <= n; number++)
 		{
-			for (multiplication = 0; multiplication <= 9; multiplication++)
+			for (multiplication = 0; multiplication <= n; multiplication++)
 			{
 				multi_number = number * multiplication;
 				if (multi_number >= 10)
