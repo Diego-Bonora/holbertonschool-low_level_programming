@@ -9,6 +9,7 @@ void print_times_table(int n)
 	int number;
 	int multiplication;
 	int multi_number;
+	int 3number;
 
 	if (n < 0 || n > 15)
 	{
@@ -21,10 +22,17 @@ void print_times_table(int n)
 			for (multiplication = 0; multiplication <= n; multiplication++)
 			{
 				multi_number = number * multiplication;
-				if (multi_number >= 10)
+				if (multi_number >= 10 && multinumber <= 99)
 				{
 					_putchar(multi_number / 10 + '0');
 					_putchar(multi_number % 10 + '0');
+				}
+				else if (multi_number >= 100)
+				{
+					3number = multi_number / 10;
+					_putchar(3number / 10 + '0');
+					_putchar(3number % 10 + '0');
+					_putchar(multi_number % 10 + '0');		
 				}
 				else
 				{
