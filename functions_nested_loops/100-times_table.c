@@ -31,7 +31,6 @@ void print_times_table(int n)
 				else if (multi_number >= 100)
 				{
 					number3 = multi_number / 10;
-					_putchar(' ');
 					_putchar(number3 / 10 + '0');
 					_putchar(number3 % 10 + '0');
 					_putchar(multi_number % 10 + '0');
@@ -48,6 +47,7 @@ void print_times_table(int n)
 					if (multiplication != n)
 				{
 					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 				}
 			}
