@@ -12,7 +12,7 @@ void times_table(void)
 	{
 		for (multiplication = 0; multiplication <= 9; multiplication++)
 		{
-			_putchar(number * multiplication + '0');
+			_putchar((number * multiplication) + '0');
 			if (multiplication != 9)
 			{
 				_putchar(',');
