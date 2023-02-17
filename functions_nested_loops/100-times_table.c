@@ -35,7 +35,7 @@ void print_times_table(int n)
 					}
 					_putchar(multi_number + '0');
 				}
-					if (multiplication != 9)
+					if (multiplication != n)
 				{
 					_putchar(',');
 					_putchar(' ');
