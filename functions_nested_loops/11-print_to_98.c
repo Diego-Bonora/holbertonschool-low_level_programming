@@ -21,4 +21,5 @@ void print_to_98(int n)
 		for (num = n; num == 98; num--)
 			printf("%d, ", num);
 	}
+	putchar('\n');
 }
