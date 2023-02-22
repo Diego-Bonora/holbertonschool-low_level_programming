@@ -16,6 +16,7 @@ void print_triangle(int size)
 		while (space != 0)
 		{
 			_putchar(' ');
+			space--;
 		}
 		_putchar('#');
 		_putchar('\n');
