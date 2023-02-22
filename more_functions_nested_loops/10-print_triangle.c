@@ -11,20 +11,27 @@ void print_triangle(int size)
 	int space;
 	int amount;
 
-	for (number = 0; number < size; number++)
+	if (size <= 0)
 	{
-		space = size - number - 1;
-		while (space != 0)
-		{
-			_putchar(' ');
-			space--;
-		}
-		amount = number + 1;
-		while (amount != 0)
-		{
-			_putchar('#');
-			amount--;
-		}
 		_putchar('\n');
+	}
+	else
+	{
+		for (number = 0; number < size; number++)
+		{
+			space = size - number - 1;
+			while (space != 0)
+			{
+				_putchar(' ');
+				space--;
+			}
+			amount = number + 1;
+			while (amount != 0)
+			{
+				_putchar('#');
+				amount--;
+			}
+			_putchar('\n');
+		}
 	}
 }
