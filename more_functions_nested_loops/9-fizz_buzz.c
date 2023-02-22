@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main -
- * Return:
+ * main - the Fizz-Buzz test
+ * Return: int 0
 */
 
 int main(void)
@@ -24,7 +24,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%d",number);
+			printf("%d", number);
 		}
 		if (number != 100)
 			putchar(' ');
