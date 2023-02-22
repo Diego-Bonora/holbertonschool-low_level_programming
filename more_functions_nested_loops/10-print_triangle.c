@@ -9,6 +9,7 @@ void print_triangle(int size)
 {
 	int number;
 	int space;
+	int amount;
 
 	for (number = 0; number < size; number++)
 	{
@@ -18,7 +19,12 @@ void print_triangle(int size)
 			_putchar(' ');
 			space--;
 		}
-		_putchar('#');
+		amount = number + 1;
+		while (amount != 0)
+		{
+			_putchar('#');
+			amount--;
+		}
 		_putchar('\n');
 	}
 }
