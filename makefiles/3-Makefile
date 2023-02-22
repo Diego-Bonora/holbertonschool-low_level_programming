@@ -11,10 +11,11 @@ clean:
 	$(RM) -f *~ $(NAME)
 
 oclean:
-	echo 'hola'
+	$(RM) -f $(OBJ)
 
 fclean:
-	echo 'hola'
+	$(RM) -f $(NAME) $(OBJ)
 
-re:
-	echo 'hola'
+re:$(OBJ)
+	$(RM) -f $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
