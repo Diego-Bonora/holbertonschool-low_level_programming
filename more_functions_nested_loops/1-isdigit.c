@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _isdigit - returns 1 if its a digit
- * @c: inout number 
+ * @c: inout number
  * Return: 1 if its a digit
 */
 
