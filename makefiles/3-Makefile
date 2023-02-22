@@ -9,3 +9,12 @@ all: $(OBJ)
 
 clean:
 	$(RM) *~ holberton
+
+oclean:
+	echo 'hola'
+
+fclean:
+	echo 'hola'
+
+re:
+	echo 'hola'
