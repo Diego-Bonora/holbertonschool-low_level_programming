@@ -22,5 +22,5 @@ int main(void)
 		num++;
 	}
 	printf("%d\n", big);
-	return (0);
+	return (big);
 }
