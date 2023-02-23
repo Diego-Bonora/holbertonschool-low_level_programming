@@ -21,5 +21,6 @@ int main(void)
 		}
 		num++;
 	}
+	peinrf("%d", big);
 	return (big);
 }
