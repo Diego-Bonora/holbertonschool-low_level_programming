@@ -21,6 +21,6 @@ int main(void)
 		}
 		num++;
 	}
-	printf("%d", big);
-	return (big);
+	printf("%d\n", big);
+	return (0);
 }
