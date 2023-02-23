@@ -1,20 +1,19 @@
 #include <stdio.h>
-#include <math.h>
 /**
- * main -
- * Return:
+ * main - gives the biggest factor number
+ * Return: variable big
 */
 
 int main(void)
 {
 	long int variable = 612852475143;
-	int raiz = sqrt(612852475143) + 1;
+	int mitad = variable / 2;
 	int num = 2;
 	int big = 0;
 
-	while (num != raiz)
+	while (num != mitad)
 	{
-		if(variable % num == 0)
+		if (variable % num == 0)
 		{
 			if (num >= big)
 				big = num;
@@ -22,6 +21,5 @@ int main(void)
 		}
 		num++;
 	}
-	printf("%d",big);
 	return (big);
 }
