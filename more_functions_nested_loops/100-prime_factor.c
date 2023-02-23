@@ -21,6 +21,6 @@ int main(void)
 		}
 		num++;
 	}
-	peinrf("%d", big);
+	printf("%d", big);
 	return (big);
 }
