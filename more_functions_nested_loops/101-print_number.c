@@ -27,8 +27,8 @@ void print_number(int n)
 		{
 			cero = 1;
 			num = num * 10;
-                	num = num + 1;
-                	n = n / 10;
+			num = num + 1;
+			n = n / 10;
 		}
 		while (n >= 10)
 		{
