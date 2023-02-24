@@ -12,8 +12,6 @@ void print_number(int n)
 	int negativo = 0;
 	int cero = 0;
 
-	printf("%d", n);
-
 	if (n == 0)
 	{
 		_putchar('0');
