@@ -7,11 +7,10 @@
 int main(void)
 {
 	long int variable = 612852475143;
-	int mitad = variable / 4;
 	int num = 2;
 	int big = 0;
 
-	while (num != mitad)
+	while (variable != 1)
 	{
 		if (variable % num == 0)
 		{
