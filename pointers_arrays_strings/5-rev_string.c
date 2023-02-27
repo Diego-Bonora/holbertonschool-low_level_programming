@@ -1,0 +1,21 @@
+#include "main.h"
+/**
+ * main -
+ * Return:
+*/
+void rev_string(char *s)
+{
+	int len;
+	int changer;
+	int count;
+
+	for (len = 0; s[len] != '\0'; len++)
+	{}
+
+	for (count = 0; count <= len / 2; count++)
+	{
+		changer = s[count];
+		s[count] = s[len - count -1];
+		s[len - count -1] = changer;
+	}
+}
