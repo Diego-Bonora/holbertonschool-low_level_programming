@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * main -
- * Return:
+ * rev_string - reverses an string
+ * @s:input string
+ * Return:nothing
 */
 void rev_string(char *s)
 {
@@ -12,10 +13,10 @@ void rev_string(char *s)
 	for (len = 0; s[len] != '\0'; len++)
 	{}
 
-	for (count = 0; count <= len / 2 - 1; count++)
+	for (count = 0; count <= len / 2 - i1; count++)
 	{
 		changer = s[count];
-		s[count] = s[len - count -1];
-		s[len - count -1] = changer;
+		s[count] = s[len - count - 1];
+		s[len - count - 1] = changer;
 	}
 }
