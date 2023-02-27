@@ -7,5 +7,11 @@
 
 void _puts(char *str)
 {
-	printf("%s", *str);
+	int count;
+
+	for (count = 0; str[count] != '\0'; ++count)
+	{
+		_putchar(str[count]);
+	}
+	_putchar('\n');
 }
