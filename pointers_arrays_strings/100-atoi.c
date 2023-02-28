@@ -25,9 +25,10 @@ int _atoi(char *s)
 		if (s[len] >= 48 && s[len] <= 57)
 		{
 			num = num * 10;
-			num = num + s[len] - '0';
-			if (top != 2)
-				num *= sign;
+			if (sign == 1)
+				num += s[len] - '0';
+			else if (sign == -1)
+				num -= s[len] - '0';
 			top = 2;
 		}
 		if (top == 2 && (s[len] < 48 && s[len > 57]))
