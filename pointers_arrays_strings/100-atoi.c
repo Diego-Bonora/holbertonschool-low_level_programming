@@ -6,7 +6,7 @@
 
 int _atoi(char *s)
 {
-	int num = 0;
+	long int num = 0;
 	int sign = 1;
 	int len = 0;
 	int lens;
