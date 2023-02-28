@@ -15,9 +15,9 @@ int _atoi(char *s)
 
 	for (lens = 0; s[lens]; lens++)
 	{
-		if (s[len] == '+')
+		if (s[lens] == '+')
 			sign *= 1;
-		else if (s[len] == '-')
+		else if (s[lens] == '-')
 			sign *= -1;
 	}
 	while (top != 1)
