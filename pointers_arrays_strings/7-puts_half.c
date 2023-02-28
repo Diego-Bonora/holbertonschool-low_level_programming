@@ -14,7 +14,10 @@ void puts_half(char *str)
 	for (len = 0; str[len]; len++)
 		;
 
-	amount = len / 2 + 1;
+	if (len % 10 != 0)
+		amount = len / 2;
+	else
+		amount = len / 2 + 1;
 
 	for (count = amount; count < len; count++)
 		_putchar(str[count]);
