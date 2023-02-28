@@ -15,11 +15,14 @@ int _atoi(char *s)
 
 	for (lens = 0; s[lens]; lens++)
 	{
-		if (s[lens] == '+')
+		if (s[lens] >= 48 && s[lens] <= 57)
+			top = 1;
+		if (s[lens] == '+' && top != 1)
 			sign *= 1;
-		else if (s[lens] == '-')
+		else if (s[lens] == '-' && top != 1)
 			sign *= -1;
 	}
+	top = 0;
 	while (top != 1)
 	{
 		if (s[len] >= 48 && s[len] <= 57)
