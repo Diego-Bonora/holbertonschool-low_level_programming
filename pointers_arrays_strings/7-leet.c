@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * leet -
- * @n
- * Return:
+ * leet - changer letters
+ * @n: input string
+ * Return: string
 */
 
 char *leet(char *n)
