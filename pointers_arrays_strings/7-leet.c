@@ -16,7 +16,7 @@ char *leet(char *n)
 	{
 		for (len2 = 0; n[len2]; len2++)
 		{
-			if (n[len2] == listaascii[len])
+			if (n[len2] == listascii[len])
 			{
 				n[len2] = listanum[len];
 			}
