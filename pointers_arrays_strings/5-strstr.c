@@ -32,11 +32,14 @@ char *_strstr(char *haystack, char *needle)
 			stop = 1;
 			haystack -= largo;
 		}
+		else
+		{
+			*haystack++;
+		}
 		if (*haystack == '\0')
 		{
 			return (NULL);
 		}
-		haystack++;
 	}
 	return (haystack);
 }
