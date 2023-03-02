@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 		if (count == largo)
 		{
 			stop = 1;
-			haystack -= largo + 1;
+			haystack -= largo;
 		}
 		if (*haystack == '\0')
 		{
