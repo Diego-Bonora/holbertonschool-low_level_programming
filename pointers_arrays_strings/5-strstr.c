@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- * _strstr -
- * Return:
+ * _strstr - returns a string from the substring
+ * @haystack: input string
+ * @needle: input substring
+ * Return: string
 */
 
 char *_strstr(char *haystack, char *needle)
@@ -30,11 +32,11 @@ char *_strstr(char *haystack, char *needle)
 			stop = 1;
 			haystack -= largo + 1;
 		}
+		if (*haystack == '\0')
+		{
+			return (NULL);
+		}
 		haystack++;
-	}
-	if (count == 0)
-	{
-		return (NULL);
 	}
 	return (haystack);
 }
