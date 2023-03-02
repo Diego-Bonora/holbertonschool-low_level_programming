@@ -8,17 +8,9 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int len;
+	unsigned int len;
 	int len2;
 	int temp;
-	int len3;
-	int not[60];
-	int cnot = 0;
-	unsigned int num = 0;
-
-	(void)len3;
-	(void)cnot;
-	(void)not;
 
 	for (len = 0; s[len]; len++)
 	{
@@ -29,12 +21,11 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				temp++;
 			}
-			else
 		}
 		if (temp == 0)
 		{
-			num++;
+			break;
 		}
 	}
-	return (num);
+	return (len);
 }
