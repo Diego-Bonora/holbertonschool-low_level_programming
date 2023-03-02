@@ -8,25 +8,33 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int temp;
 	int len;
 	int len2;
-	unsigned int amount = 0;
+	int temp;
+	int len3;
+	int not[60];
+	int cnot = 0;
+	unsigned int num = 0;
 
-	for (len = 0; accept[len]; len++)
+	(void)len3;
+	(void)cnot;
+	(void)not;
+
+	for (len = 0; s[len]; len++)
 	{
 		temp = 0;
-		for (len2 = 0; s[len2]; len2++)
+		for (len2 = 0; accept[len2]; len2++)
 		{
-			if (s[len2] != accept[len])
+			if (s[len] == accept[len2])
 			{
-				temp = 1;
+				temp++;
 			}
+			else
 		}
-		if (temp == 1)
+		if (temp == 0)
 		{
-			amount++;
+			num++;
 		}
 	}
-	return (amount);
+	return (num);
 }
