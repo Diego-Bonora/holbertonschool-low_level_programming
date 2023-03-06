@@ -7,7 +7,12 @@
 
 int is_prime_number(int n)
 {
-	int num = n;
+	int num = 2;
+
+	if (n <= 1)
+	{
+		return (0);
+	}
 
 	return (numsum(num, n));
 }
@@ -21,14 +26,13 @@ int is_prime_number(int n)
 
 int numsum(int x, int n)
 {
-	x--;
-	if (n % x == 0 && x != 0)
+	if (n % x == 0 && x != n)
 	{
 		return (0);
 	}
-	else if (x == 0)
+	else if (x == n)
 	{
 		return (1);
 	}
-	return (numsum(x, n));
+	return (numsum(x + 1, n));
 }
