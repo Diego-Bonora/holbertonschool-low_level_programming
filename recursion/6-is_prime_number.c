@@ -21,14 +21,14 @@ int is_prime_number(int n)
 
 int numsum(int x, int n)
 {
-	num--;
-	if (n % num == 0 && num != 0)
+	x--;
+	if (n % x == 0 && x != 0)
 	{
 		return (0);
 	}
-	else if (num == 0)
+	else if (x == 0)
 	{
 		return (1);
 	}
-	return (numsum(num, n));
+	return (numsum(x, n));
 }
