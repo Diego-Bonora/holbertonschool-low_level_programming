@@ -4,13 +4,9 @@
  * Return: int 0
 */
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	int len;
-
-	for (len = 0; argv[len]; len++)
-	{
-		printf("argv[%d]", len);
-	}
+	(void)argc;
+	printf("%s\n", argv[0]);
 	return (0);
 }
