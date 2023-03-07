@@ -4,7 +4,7 @@
  * main - multiplies 2 numbers
  * @argc: input number
  * @argv: input string array
- * Return: int 1 or suma
+ * Return: int 1 or 0
 */
 
 int main(int argc, char *argv[])
@@ -18,5 +18,5 @@ int main(int argc, char *argv[])
 	}
 	suma = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", suma);
-	return (suma);
+	return (0);
 }
