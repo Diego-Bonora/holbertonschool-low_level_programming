@@ -8,7 +8,7 @@ int main(void)
 {
 	int len;
 
-	for (len = 0; len < argc; len++)
+	for (len = 0; argv[len]; len++)
 	{
 		printf("argv[%d]", len);
 	}
