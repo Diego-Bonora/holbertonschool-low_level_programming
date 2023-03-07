@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
  * main - prints the name of the program
- * Return:
+ * Return: int 0
 */
 
-void main()
+int main(void)
 {
 	int len;
 
@@ -12,4 +12,5 @@ void main()
 	{
 		printf("argv[%d]", len);
 	}
+	return (0);
 }
