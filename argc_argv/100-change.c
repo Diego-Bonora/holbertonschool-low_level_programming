@@ -20,6 +20,10 @@ int main(int argc, char *argv[])
 	else
 	{
 		num = atoi(argv[1]);
+		if (num < 0)
+		{
+			num = 0;
+		}
 		while (num != 0)
 		{
 			if (num >= 25)
