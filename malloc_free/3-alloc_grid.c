@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- * main -
- * Return:
+ * alloc_grid - creates a 2 dimensional array
+ * @width: the widht of the array
+ * @height: the height of the array
+ * Return: a 2 dimentional array
 */
 
 int **alloc_grid(int width, int height)
@@ -16,6 +18,14 @@ int **alloc_grid(int width, int height)
 	for (len = 0; len < height; len++)
 	{
 		matrix[len] = malloc(width * sizeof(int));
+	}
+
+	for (len = 0; len < height; len++)
+	{
+		for (len2 = 0; len2 < widht; len2++)
+		{
+			matrix[len][len2] = 0;
+		}
 	}
 
 	return (matrix);
