@@ -26,20 +26,26 @@ char *str_concat(char *s1, char *s2)
 	newstr = malloc((len + len2) * sizeof(char) + 1);
 	if (!newstr)
 		return (NULL);
-	while (len >= 0)
+	if (len != -1)
 	{
-		newstr[newlen] = s1[newlen];
-		newlen++;
-		len--;
+		while (len >= 0)
+		{
+			newstr[newlen] = s1[newlen];
+			newlen++;
+			len--;
+		}
+		newlen--;
 	}
-	newlen--;
 	len = 0;
-	while (len2 >= 0)
+	if (len2 != -1)
 	{
-		newstr[newlen] = s2[len];
-		newlen++;
-		len++;
-		len2--;
+		while (len2 >= 0)
+		{
+			newstr[newlen] = s2[len];
+			newlen++;
+			len++;
+			len2--;
+		}
 	}
 	return (newstr);
 }
