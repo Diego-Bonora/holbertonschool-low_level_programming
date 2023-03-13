@@ -34,7 +34,7 @@ int **alloc_grid(int width, int height)
 
 	for (len = 0; len < height; len++)
 	{
-		for (len2 = 0; len2 < widht; len2++)
+		for (len2 = 0; len2 < width; len2++)
 		{
 			matrix[len][len2] = 0;
 		}
