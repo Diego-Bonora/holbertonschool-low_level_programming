@@ -48,6 +48,6 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 	if (len == -1 && len2 == -1)
-		newstr[0] = "";
+		newstr[0] = ' ';
 	return (newstr);
 }
