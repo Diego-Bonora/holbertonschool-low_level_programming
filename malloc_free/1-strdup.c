@@ -9,14 +9,14 @@ char *_strdup(char *str)
 {
 	char *copy;
 	int len;
-
-	for (len = 0; str[len]; len++)
-	{}
-
+	
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	for (len = 0; str[len]; len++)
+	{}
+
 	copy = malloc(len * sizeof(char));
 
 	for (len = 0; str[len]; len++)
