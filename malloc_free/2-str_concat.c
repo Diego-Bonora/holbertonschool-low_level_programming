@@ -23,7 +23,10 @@ char *str_concat(char *s1, char *s2)
 	else
 		for (len2 = 0; s2[len2]; len2++)
 		{}
-	newstr = malloc((len + len2) * sizeof(char) + 1);
+	if (len == -1 && len2 == -1)
+		newstr = malloc(1 * sizeof(char) + 1);
+	else
+		newstr = malloc((len + len2) * sizeof(char) + 1);
 	if (!newstr)
 		return (NULL);
 	if (len != -1)
