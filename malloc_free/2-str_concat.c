@@ -32,24 +32,18 @@ char *str_concat(char *s1, char *s2)
 	if (len != -1)
 	{
 		while (len >= 0)
-		{
-			newstr[newlen] = s1[newlen];
+		{	newstr[newlen] = s1[newlen];
 			newlen++;
-			len--;
-		}
-		newlen--;
-	}
+			len--; }
+		newlen--; }
 	len = 0;
 	if (len2 != -1)
 	{
 		while (len2 >= 0)
-		{
-			newstr[newlen] = s2[len];
+		{	newstr[newlen] = s2[len];
 			newlen++;
 			len++;
-			len2--;
-		}
-	}
+			len2--; } }
 	if (len == -1 && len2 == -1)
 		newstr[0] = ' ';
 	return (newstr);
