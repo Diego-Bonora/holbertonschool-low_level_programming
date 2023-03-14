@@ -51,6 +51,6 @@ int main(void)
 	}
 	print_grid(grid, h, w);
 	printf("\n");
-	/*free(grid);*/
+	free(grid);
 	return (0);
 }
