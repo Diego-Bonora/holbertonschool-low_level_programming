@@ -53,5 +53,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newstr[newstrlen] = s2[len3];
 		len3++;
 	}
+	newstr[newstrlen] = '\0';
 	return (newstr);
 }
