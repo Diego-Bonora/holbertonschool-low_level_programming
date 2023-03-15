@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			len2 = n;
 		}
 	}
-	newstr = malloc((len + len2) * sizeof(char));
+	newstr = malloc((len + len2) * sizeof(char) + 1);
 	if (!newstr)
 	{
 		return(NULL);
