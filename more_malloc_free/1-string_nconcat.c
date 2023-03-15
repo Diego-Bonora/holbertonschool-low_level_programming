@@ -44,14 +44,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return(NULL);
 	}
 
-	for (newstrlen = 0; newstrlen <= len; newstrlen++)
+	if (len != 0)
 	{
-		newstr[newstrlen] = s1[newstrlen];
+		for (newstrlen = 0; newstrlen <= len; newstrlen++)
+		{
+			newstr[newstrlen] = s1[newstrlen];
+		}
+		newstrlen--;
 	}
-	for (--newstrlen; newstrlen < (len + len2); newstrlen++)
+	if (len2 != 0)
 	{
-		newstr[newstrlen] = s2[len3];
-		len3++;
+		for (; newstrlen < (len + len2); newstrlen++)
+		{
+			newstr[newstrlen] = s2[len3];
+			len3++;
+		}
 	}
 	newstr[newstrlen] = '\0';
 	return (newstr);
