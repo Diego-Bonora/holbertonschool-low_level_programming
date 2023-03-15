@@ -12,9 +12,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len;
 	unsigned int len2;
 	unsigned int len3 = 0;
-	unsigned int newstrlen;
+	unsigned int newstrlen = 0;
 	char *newstr;
 
+	(void)newstrlen;
+	(void)len3;
 	if (s1 == NULL)
 	{
 		len = 0;
@@ -43,7 +45,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return(NULL);
 	}
-
 	if (len != 0)
 	{
 		for (newstrlen = 0; newstrlen <= len; newstrlen++)
@@ -54,10 +55,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (len2 != 0)
 	{
-		for (; newstrlen < (len + len2); newstrlen++)
+		for (len3 = 0; len3 <= len2; len3++)
 		{
 			newstr[newstrlen] = s2[len3];
-			len3++;
+			newstrlen++;
 		}
 	}
 	newstr[newstrlen] = '\0';
