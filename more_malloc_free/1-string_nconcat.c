@@ -48,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		newstr[newstrlen] = s1[newstrlen];
 	}
-	for (--newstrlen; newstrlen <= (len + len2); newstrlen++)
+	for (newstrlen = newstrlen; newstrlen <= (len + len2); newstrlen++)
 	{
 		newstr[newstrlen] = s2[len3];
 		len3++;
