@@ -8,7 +8,7 @@
 
 int *array_range(int min, int max)
 {
-	int len;
+	int len = 0;
 	int *pointer;
 	int total_len;
 
@@ -22,9 +22,11 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	for (len = 0; len < total_len; len++)
+	while (len < total_len)
 	{
 		pointer[len] = min + len;
+		len++;
 	}
+	pointer[len] = min + len;
 	return (pointer);
 }
