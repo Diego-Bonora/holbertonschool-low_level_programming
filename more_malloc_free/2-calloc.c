@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- * _calloc -
- * Return:
+ * _calloc - allocates memory and sets it to zero
+ * @nmemb: input number
+ * @size: input number
+ * Return: pointer set to zero
 */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -13,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	pointer = malloc(nmemb * size + 1);
+	pointer = malloc(nmemb * size);
 	if (!pointer)
 	{
 		return (NULL);
