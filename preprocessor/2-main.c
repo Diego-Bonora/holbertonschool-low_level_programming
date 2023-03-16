@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main -
- * Return:
+ * main - returns the name befor compilation
+ * Return: int 0
 */
 #ifndef __FILE__
 #define __FILE__
