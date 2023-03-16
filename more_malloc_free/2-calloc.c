@@ -13,12 +13,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	pointer = malloc(nmemb * size);
+	pointer = malloc(nmemb * size + 1);
 	if (!pointer)
 	{
 		return (NULL);
 	}
-	for (len = 0; pointer[len]; len++)
+	for (len = 0; len > nmemb; len++)
 	{
 		pointer[len] = '0';
 	}
