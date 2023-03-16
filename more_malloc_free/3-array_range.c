@@ -27,6 +27,10 @@ int *array_range(int min, int max)
 		pointer[len] = min + len;
 		len++;
 	}
+	if (len != 0)
+	{
+		len--;
+	}
 	pointer[len] = min + len;
 	return (pointer);
 }
