@@ -11,8 +11,6 @@
  */
 
 typedef struct dog
-	printf("%s\n", dog->owner;
-}
 {
 	char *name;
 	float age;
