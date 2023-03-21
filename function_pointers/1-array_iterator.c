@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include "funtion_pointers.h"
+#include "function_pointers.h"
 /**
  * array_iterator - prints each element of the array
  * @array: input array
  * @size: size of the array
  * @action: pointer to function
- * Return: nothing
+ * Return: nothingi
 */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int len;
+	size_t len;
 
 	if (action)
 	{
