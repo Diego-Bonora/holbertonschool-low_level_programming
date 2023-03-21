@@ -3,7 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - 
+ * main - calculadora brr
+ * @argc: lenght of argv
+ * @argv: list the size of argc
+ * Return: int 0
  */
 
 int main(int argc, char *argv[])
@@ -14,13 +17,13 @@ int main(int argc, char *argv[])
 
 	if (argc == 4)
 	{
-		num1 = atoi(argv[1]);
-		num2 = atoi(argv[3]);
+		num1 = atoi(argv[1]) + 0;
+		num2 = atoi(argv[3]) + 0;
 
 		f = get_op_func(argv[2]);
 		if (f)
 		{
-			if ((strcmp(argv[2], "/") == 0 && num2 == 0) || (strcmp(argv[2], "%") == 0 && num2 == 0))
+			if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%")) && num2 == 0)
 			{
 				printf("Error\n");
 				exit(100);
