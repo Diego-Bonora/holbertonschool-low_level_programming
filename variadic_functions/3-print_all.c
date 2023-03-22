@@ -70,8 +70,8 @@ void print_all(const char * const format, ...)
 	int len = 0;
 	int len2;
 	va_list ap;
-	char *1str = "";
-	char *2str = ", ";
+	char *str1 = "";
+	char *str2 = ", ";
 	format_t form[] = {
 		{'i', print_int},
 		{'c', print_char},
@@ -87,9 +87,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[len] == form[len2].op)
 			{
-				printf("%s", 1str);
+				printf("%s", str1);
 				form[len2].f(ap);
-				1str = 2str;
+				str1 = str2;
 			}
 			len2++;
 		}
