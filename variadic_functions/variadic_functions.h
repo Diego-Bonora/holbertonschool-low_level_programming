@@ -16,8 +16,8 @@ void print_all(const char * const format, ...);
 
 typedef struct format
 {
-	char *op;
-	int (*f)(va_list arg);
+	char op;
+	void (*f)(va_list arg);
 } format_t;
 
 void print_int(va_list arg);
