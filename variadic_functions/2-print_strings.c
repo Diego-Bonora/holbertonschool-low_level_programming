@@ -13,8 +13,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list ap;
 	
 	if(n <= 0)
+	{
 		putchar('\n');
 		return;
+	}
 	va_start(ap, n);
 	for (len = 0; len < (n - 1); len++)
 	{
