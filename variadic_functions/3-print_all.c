@@ -67,9 +67,9 @@ void print_string(va_list arg)
 
 void print_all(const char * const format, ...)
 {
+	va_list ap;
 	int len = 0;
 	int len2;
-	va_list ap;
 	char *str1 = "";
 	char *str2 = ", ";
 	format_t form[] = {
@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(ap, format);
-	while (format[len] && format)
+	while (format && format[len])
 	{
 		len2 = 0;
 		while (form[len2].op)
