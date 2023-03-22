@@ -55,9 +55,8 @@ void print_string(va_list arg)
 
 	str = va_arg(arg, char*);
 	if (str)
-		printf("%s", str);
-	else
-		printf("(nil)");
+		str = "(nil)";
+	printf("%s", str);
 }
 
 /**
@@ -71,6 +70,8 @@ void print_all(const char * const format, ...)
 	int len = 0;
 	int len2;
 	va_list ap;
+	char *1str = "";
+	char *2str = ", ";
 	format_t form[] = {
 		{'i', print_int},
 		{'c', print_char},
@@ -86,11 +87,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[len] == form[len2].op)
 			{
+				printf("%s", 1str);
 				form[len2].f(ap);
-				if (format[len + 1])
-				{
-					printf(", ");
-				}
+				1str = 2str;
 			}
 			len2++;
 		}
