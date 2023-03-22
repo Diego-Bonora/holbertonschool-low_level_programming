@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(ap, format);
-	while (format[len])
+	while (format[len] && format)
 	{
 		len2 = 0;
 		while (form[len2].op)
