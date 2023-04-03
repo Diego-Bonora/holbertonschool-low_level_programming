@@ -9,7 +9,6 @@
 void free_list(list_t *head)
 {
 	free_head(head);
-	free(head);
 }
 
 void free_head(list_t *head)
@@ -22,5 +21,6 @@ void free_head(list_t *head)
 	}
 	free_head(head->next);
 	free(head->str);
+	free(head->next);
 	free(head);
 }
