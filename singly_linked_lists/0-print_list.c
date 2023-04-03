@@ -8,19 +8,11 @@
 
 size_t print_list(const list_t *h)
 {
-	list_t *temp;
+	const list_t *temp = h;
 	int lenght = 0;
 
 	if (!h)
 		return (0);
-
-	temp = malloc(sizeof(list_t));
-	if (!temp)
-	{
-		return (-1);
-	}
-
-	*temp = *h;
 
 	while (temp != NULL)
 	{
@@ -35,7 +27,5 @@ size_t print_list(const list_t *h)
 		lenght++;
 		temp = temp->next;
 	}
-
-	free(temp);
 	return (lenght);
 }
