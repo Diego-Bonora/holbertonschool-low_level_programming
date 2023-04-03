@@ -19,6 +19,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	temp = malloc(sizeof(list_t));
 	if (!temp)
+		free(recorer);
 		return (NULL);
 
 	len = strlen(str);
