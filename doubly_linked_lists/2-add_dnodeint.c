@@ -4,7 +4,7 @@
  * add_dnodeint - adds a node to the head
  * @head: input node
  * @n: int for inserting into new node
- * Return - new node
+ * Return: new node
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
