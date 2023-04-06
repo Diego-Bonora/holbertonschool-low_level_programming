@@ -9,16 +9,12 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int sum = 2;
-	char buffer[64];
-	int loop;
+	int loop = 0;
 
 	if (n == 0 || n == 1)
 		printf("%lu", n);
 	else
 	{
-		for (loop = 0; loop <= 64; loop++)
-			buffer[loop] = '\0';
-		loop = 0;
 		while (sum <= n)
 			sum *= 2;
 		sum /= 2;
@@ -26,14 +22,13 @@ void print_binary(unsigned long int n)
 		{
 			if (n >= sum)
 			{
-				buffer[loop] = '1';
+				putchar('1');
 				n -= sum;
 			}
 			else
-				buffer[loop] = '0';
+				putchar('0');
 			loop++;
 			sum /= 2;
 		}
-		printf("%s", buffer);
 	}
 }
