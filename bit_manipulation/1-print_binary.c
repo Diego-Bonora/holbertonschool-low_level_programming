@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	int loop = 0;
 
 	if (n == 0 || n == 1)
-		printf("%lu", n);
+		putchar(n + '0');
 	else
 	{
 		while (sum <= n)
