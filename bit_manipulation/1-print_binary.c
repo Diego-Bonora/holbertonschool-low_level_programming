@@ -34,7 +34,7 @@ void print_binary(unsigned long int n)
 }
 
 /**
- * division - function for dividing without /
+ * division - function for dividing without sign 
  * @sum: input number
  * Return: returns the division of a number divided by 2
  */
