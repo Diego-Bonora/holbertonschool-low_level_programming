@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 		putchar(n + '0');
 	else
 	{
-		for (loop = 62; loop >= 0; loop--)
+		for (loop = 63; loop >= 0; loop--)
 		{
 			sum = n >> loop;
 
