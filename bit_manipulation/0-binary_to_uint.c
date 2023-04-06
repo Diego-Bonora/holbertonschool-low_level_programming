@@ -10,12 +10,13 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum = 0;
 	unsigned int sum_helpper;
-	int num = strlen(b);
+	int num;
 	int num_loop;
 	int loop;
 
 	if (!b)
 		return (0);
+	num = strlen(b);
 	for (loop = 0; b[loop]; loop++)
 	{
 		if (b[loop] != '0' && b[loop] != '1')
