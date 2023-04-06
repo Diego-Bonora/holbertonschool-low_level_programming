@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- *
+ * binary_to_uint - converts binary to unsigned int
+ * @b: input binary number
+ * Return: returns the unsigned int number from a binary input
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -12,8 +14,8 @@ unsigned int binary_to_uint(const char *b)
 	int num_loop;
 	int loop;
 
-	(void)sum;
-	(void)num;
+	if (!b)
+		return (0);
 	for (loop = 0; b[loop]; loop++)
 	{
 		if (b[loop] != '0' && b[loop] != '1')
