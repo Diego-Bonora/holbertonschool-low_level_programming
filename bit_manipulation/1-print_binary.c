@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 	{
 		while (sum <= n)
 			sum *= 2;
-		sum /= 2;
+		sum = division(sum);
 		while (sum >= 1)
 		{
 			if (n >= sum)
@@ -28,7 +28,23 @@ void print_binary(unsigned long int n)
 			else
 				putchar('0');
 			loop++;
-			sum /= 2;
+			sum = division(sum);
 		}
 	}
+}
+
+/**
+ * division - function for dividing without /
+ * @sum: input number
+ * Return: returns the division of a number divided by 2
+ */
+
+unsigned int division(unsigned int sum)
+{
+	if (sum < 2)
+	{
+		return (0);
+	}
+
+	return (1 + division(sum - 2));
 }
