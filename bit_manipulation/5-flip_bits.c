@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- *
+ * flip_bits - checks for eha different bits
+ * @n: first number
+ * @m: second number
+ * Return: returns the amount of different bits
  */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
@@ -15,12 +18,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	{
 		value1 = n >> loop;
 		value2 = m >> loop;
-
-		if ((value1 & 1) || (value2 & 1))
-		{
-			if(value1 != value2)
-				sum += 1;
-		}
+		if (((value1 & 1) == 1) && ((value2 & 1) == 0))
+			sum += 1;
+		else if (((value1 & 1) == 0) && ((value2 & 1) == 1))
+			sum += 1;
 	}
 	return (sum);
 }
