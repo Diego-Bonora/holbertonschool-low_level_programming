@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 	(void)text_content;
 	if (!filename)
 		return (-1);	
-	ptr = open(filename,  O_WRONLY | O_CREAT, 0600);
+	ptr = open(filename,  O_WRONLY | O_TRUNC | O_CREAT, 0600);
 	if (!ptr)
 		return (-1);
 
