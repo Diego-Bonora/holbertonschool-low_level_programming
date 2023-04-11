@@ -7,7 +7,7 @@
  * Return: returns the amount of chars printed
  */
 
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char letter;
 	size_t count = 0;
@@ -19,15 +19,14 @@ size_t read_textfile(const char *filename, size_t letters)
 	ptr = fopen(filename, "r");
 	if (!ptr)
 		return (0);
-
 	letter = fgetc(ptr);
 	while (letters != 0 && letter != EOF)
 	{
-		write(1, &letter, 1);
+		write(STDOUT_FILENO, &letter, 1);
 		letter = fgetc(ptr);
 		count++;
 		letters--;
 	}
 	fclose(ptr);
-	return (count++);
+	return (count);
 }
