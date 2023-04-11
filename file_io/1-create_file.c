@@ -9,15 +9,16 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE *ptr;
+	int ptr;
 
+	(void)text_content;
 	if (!filename)
 		return (-1);	
-	ptr = fopen(filename, "w+");
+	ptr = open(filename,  O_WRONLY | O_CREAT, 0600);
 	if (!ptr)
 		return (-1);
 
-	fputs(text_content, ptr);
-	fclose(ptr);
+	dprintf(ptr, "%s", text_content);
+	close(ptr);
 	return (1);
 }
