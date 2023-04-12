@@ -44,8 +44,8 @@ int main(int argc, char *argv[])
 		fgets(buff, 1024, ptr2); }
 	close(ptr);
 	fclose(ptr2);
-	ptr = NULL;
-	ptrs = NULL;
+	ptr = '\0';
+	ptr2 = NULL;
 	if (ptr || ptr2)
 	{	write(STDERR_FILENO, "Error: Can't close fd \n", 22);
 		exit(100); }
