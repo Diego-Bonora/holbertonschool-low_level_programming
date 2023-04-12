@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	{
 		write(2, "Error: Can't write to", 21);
 		write(2, argv[2], strlen(argv[2]));
-		write(2, '\n', 1);
+		write(2, "\n", 1);
 		exit(99);
 	}
 	fgets(buff, 1024, ptr2);
