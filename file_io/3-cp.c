@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 	int ptr;
 	FILE *ptr2;
 	char buff[1024];
+	int flag = 0;
 
 	if (argc != 3)
 	{
@@ -22,7 +23,9 @@ int main(int argc, char *argv[])
 	ptr2 = fopen(argv[1], "r");
 	if (!ptr2)
 	{
-		write(2, "Error: Can't read from file NAME_OF_THE_FILE\n", 45);
+		write(2, "Error: Can't read from file", 27);
+		write(2, argv[1], strlen(argv[1]));
+		write(2, "\n", 1);
 		exit(98);
 	}
 	if (ptr == -1)
@@ -32,8 +35,19 @@ int main(int argc, char *argv[])
 		write(2, "\n", 1);
 		exit(99);
 	}
+	memset(buff, 0, sizeof(buff));
 	fgets(buff, 1024, ptr2);
-	dprintf(ptr, "%s", buff);
+	while (flag == 0)
+	{
+		write(ptr, buff, strlen(buff));
+		if (feof(ptr2))
+			flag = 1;
+		else
+		{
+			memset(buff, 0, sizeof(buff));
+			fgets(buff, 1024, ptr2);
+		}
+	}
 	close(ptr);
 	fclose(ptr2);
 	return (0);
