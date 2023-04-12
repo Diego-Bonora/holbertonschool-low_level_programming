@@ -9,10 +9,9 @@
 
 int main(int argc, char *argv[])
 {
-	int ptr, true = 1;
+	int ptr, true = 1, check = 0;
 	FILE *ptr2;
 	char buff[1024];
-	int check = 0;
 
 	if (argc != 3)
 	{	write(2, "Usage: cp file_from file_to\n", 28);
@@ -22,29 +21,32 @@ int main(int argc, char *argv[])
 	if (!ptr2)
 	{	write(STDERR_FILENO, "Error: Can't read from file ", 28);
 		write(STDERR_FILENO, argv[1], strlen(argv[1]));
+		write(STDERR_FILENO, "\n", 1);
 		exit(98); }
 	if (ptr == -1)
 	{	write(STDERR_FILENO, "Error: Can't write to ", 22);
 		write(STDERR_FILENO, argv[2], strlen(argv[2]));
+		write(STDERR_FILENO, "\n", 1);
 		exit(99); }
 	memset(buff, 0, sizeof(buff));
 	fgets(buff, 1024, ptr2);
 	while (true)
 	{
-		check = write(ptr, buff, strlen(buff));
+		check = write(ptr, buff, 1024);
 		if (check == -1)
-		{	write(STDERR_FILENO, "Error: Can't write to ", 22);
+		{	puts("test");
+			write(STDERR_FILENO, "Error: Can't write to ", 22);
 			write(STDERR_FILENO, argv[2], strlen(argv[2]));
+			write(STDERR_FILENO, "\n", 1);
 			exit(99); }
 		if (feof(ptr2))
 			break;
 		memset(buff, 0, sizeof(buff));
-		fgets(buff, 1024, ptr2);
-	}
+		fgets(buff, 1024, ptr2); }
 	close(ptr);
 	fclose(ptr2);
-	if (!ptr || !ptr2)
-	{	write(STDERR_FILENO, "Error: Can't close fd ", 22);
+	if (ptr || ptr2)
+	{	write(STDERR_FILENO, "Error: Can't close fd \n", 22);
 		exit(100); }
 	return (0);
 }
