@@ -28,11 +28,10 @@ int main(int argc, char *argv[])
 		write(STDERR_FILENO, argv[2], strlen(argv[2]));
 		write(STDERR_FILENO, "\n", 1);
 		exit(99); }
-	memset(buff, 0, sizeof(buff));
+	memset(buff, '\0', sizeof(buff));
 	fgets(buff, 1024, ptr2);
 	while (true)
-	{
-		check = write(ptr, buff, 1024);
+	{	check = write(ptr, buff, 1024);
 		if (check == -1)
 		{	write(STDERR_FILENO, "Error: Can't write to ", 22);
 			write(STDERR_FILENO, argv[2], strlen(argv[2]));
@@ -40,7 +39,7 @@ int main(int argc, char *argv[])
 			exit(99); }
 		if (feof(ptr2))
 			break;
-		memset(buff, 0, sizeof(buff));
+		memset(buff, '\0', sizeof(buff));
 		fgets(buff, 1024, ptr2); }
 	close(ptr);
 	fclose(ptr2);
