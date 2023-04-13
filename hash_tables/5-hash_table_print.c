@@ -17,6 +17,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	for (count = 0; count < ht->size; count++)
 	{
+		putchar('{');
 		temp = ht->array[count];
 		while (temp)
 		{
@@ -26,5 +27,6 @@ void hash_table_print(const hash_table_t *ht)
 			temp = temp->next;
 		}
 	}
+	putchar('}');
 	putchar('\n');
 }
