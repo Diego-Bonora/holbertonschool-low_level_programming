@@ -34,22 +34,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		while (check)
 		{
 			if (strcmp(check->key, new_node->key) == 0)
-			{
-				check->value = new_node->value;
+			{	check->value = new_node->value;
 				free(new_node->key);
 				free(new_node->value);
 				free(new_node);
 				flag = 1;
-				break;
-			}
+				break; }
 			check = check->next;
 		}
 		if (flag == 0)
-		{
-			temp = ht->array[hash];
+		{	temp = ht->array[hash];
 			new_node->next = temp;
-			ht->array[hash] = new_node;
-		}
+			ht->array[hash] = new_node; }
 	}
 	return (1);
 }
