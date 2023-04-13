@@ -33,8 +33,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		check = ht->array[hash];
 		while (check)
 		{
-			if (strcmp(check->key, new_node->key) == 0)
-			{	check->value = strdup(value);
+			if (strcmp(check->key, key) == 0)
+			{	free(check->value);
+				check->value = strdup(value);
 				free(new_node->key);
 				free(new_node->value);
 				free(new_node);
